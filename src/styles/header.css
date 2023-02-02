@@ -28,7 +28,7 @@
 #categories {
   z-index: 12;
   height: 3.7em;
-  width: 9.5em;
+  width: 10em;
   position: absolute;
   top: -1em;
   box-sizing: border-box;
@@ -89,3 +89,46 @@
   padding-top: 2em;
   height: 8.7em;
 }
+
+/* searchbar */
+
+#textInput {
+  padding-left: 1em !important;
+  border: none;
+  margin-top: .7em;
+  background-color: transparent;
+  border-left: 3px solid rgb(178, 178, 178);
+  font-size: 1.2em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  padding: .3em;
+  width: 10em;
+}
+
+#textInput:focus {
+  outline: none;
+}
+
+#textInput::placeholder {
+ color: rgb(161, 159, 159);
+ font-weight: 500;
+}
+
+#searchIcon{
+  cursor: pointer;
+  font-size: 1.8em;
+  font-weight: 800;
+  position: relative;
+  left: -1.2em;
+  top: .3em;
+  color: rgb(220, 66, 92);
+}
+
+#searchIcon:hover{
+  color: rgb(238, 106, 128);
+}
+
+#searchIcon:active{
+  scale: .99;
+}
+

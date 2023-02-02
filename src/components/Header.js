@@ -5,6 +5,7 @@ function Header() {
   const [categorymenustate, setCategoryMenuState] = useState(false);
   const [categories, setCategory] = useState('Categories');
   const [arrow,setArrow] = useState('arrow_drop_down');
+  const [iconVisibility,setIconVisibility] = useState('hidden')
 
   let categorymenu = categorymenustate ? "active" : "inactive";
 
@@ -49,8 +50,17 @@ function minimizeMenu(selectedCategory) {
         </span>
        </div>
       </div>
-
-      
+    <div id="input-container">
+         <input
+         onFocusCapture={()=>{
+          setIconVisibility('hidden');
+         }}
+         onChange={()=>{
+          setIconVisibility('visible');
+         }} type="text" id="textInput" placeholder="Search Book"></input>
+         <i style={{visibility : iconVisibility}} id="searchIcon" className="material-icons">search</i>
+    </div>
+     
     </header>
   );
 }
