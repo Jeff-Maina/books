@@ -1,0 +1,6 @@
+#aside{
+    grid-area: aside;
+    background-color: bisque;
+    height: 50em;
+    width: 20em;
+}

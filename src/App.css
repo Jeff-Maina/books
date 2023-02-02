@@ -1,0 +1,14 @@
+.App{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: auto !important;
+    width: 100%;
+    background-color: aqua;
+    grid-template-areas: 
+    'header header header'
+    'randombooks randombooks randombooks'
+    'aside main main'
+    ;
+   
+}

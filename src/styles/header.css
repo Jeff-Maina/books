@@ -1,0 +1,8 @@
+#header{
+    position: fixed;
+    grid-area: header;
+    height: 4em;
+    width: 100%;
+    background-color: aquamarine;
+    width: 96em;
+}
