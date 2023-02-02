@@ -29,6 +29,13 @@
 }
 
 
+:root{
+  --background-color: #EEEEEE;
+  --text-color: #393E46;
+  --main-color: #222831;
+  --secondary-color: #00ADB5;
+}
+
 body {
   margin: 0;
   padding: 0;
