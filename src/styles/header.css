@@ -2,8 +2,8 @@
   position: fixed;
   grid-area: header;
   height: 4em;
-  width: 100%;
-  background-color: rgb(246, 246, 246);
+  width: 101%;
+  background-color: var(--background-color);
   width: 96em;
   display: flex;
   flex-direction: row;
@@ -12,6 +12,7 @@
 /* category menu styling */
 
 #select {
+  background-color: var(--background-color);
   position: relative;
   color: rgb(69, 69, 69);
   padding: 0.2em;
@@ -34,7 +35,7 @@
   box-sizing: border-box;
   padding-top: 1em;
   display: flex;
-  background-color: hsl(0, 0%, 96%);
+  background-color: var(--background-color);
 }
 
 #categories h6 {
@@ -104,6 +105,7 @@
   font-weight: 800;
   padding: 0.3em;
   width: 10em;
+  color: var(--text-color);
 }
 
 #textInput:focus {
@@ -186,9 +188,8 @@ top: -15px;
 /* menu */
 #menu{
   position: absolute;
-  right:2em;
+  right:4.8em;
   height:100%;
-  /* background-color: #00ADB5; */
   width: 5em;
 }
 
@@ -205,11 +206,12 @@ top: -15px;
 }
 
 #bar3{
+
   position: relative;
   width: 1.5em;
   transform-origin:left center;
-  /* left: 0;
-  top: 0; */
+  left: 0;
+  top: 0;
   transition: .5s;
 }
 
@@ -224,6 +226,96 @@ top: -15px;
 
 #menuIcon{
   cursor: pointer;
+  left: -10em;
+  box-sizing: border-box;
+  height: 100%;
+  position: absolute;
+  padding-top: 1em;
+  padding-left: 16em;
+  background-color:var(--background-color);
+  width:19em ;
+  z-index: 11;
+}
+
+#menuIcon:hover div{
+  background: linear-gradient(
+    to right,
+    #222831,
+    #393E46,
+    #00ADB5,
+    #222831
+  );
+  background-size: 200%;
+  animation: background-pan 2s linear infinite;
+}
+
+#menu-content{
+  z-index: -1;
+  position: absolute;
+  left: -10em;
+  width: 19em;
+  height: 19em;
+  background-color: hsl(0, 0%, 96%);
+  transition: .7s;
+}
+
+.menuActive{
+  top: 4em;
+  /* background-color: ; */
+}
+
+.menuInactive{
+  top: -15em;
+}
+
+#menu-content span{
+  cursor: pointer;
   position: relative;
-  top: 1.1em;
+  display: flex;
+  /* background-color: #00ADB5; */
+  flex-direction: row;
+}
+
+#menu-content i{
+  position: absolute;
+  right: 3em;
+  top: .5em;
+  opacity: 0;
+  transition: .5s;
+}
+
+#menu-content h3{
+  margin: 0;
+  padding: .7em;
+  padding-left: 1em;
+  color: var(--text-color);
+  font-family: comfortaa-regular;
+}
+
+#logout{
+  position: relative;
+  top: 1.4em;
+}
+
+#menu-content span:hover i{
+  opacity: 1;
+  right: 1em;
+}
+
+#menu-content span:hover{
+  background-color: rgb(201, 201, 201);
+}
+
+#menu-content span:hover h3{
+  animation: background-pan 1s linear 1;
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    #222831,
+    #393E46,
+    #00ADB5,
+    #222831);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
 }

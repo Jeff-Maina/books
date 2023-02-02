@@ -43,6 +43,11 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: overlay !important;
+}
+
+body::-webkit-scrollbar{
+  background-color: transparent;
 }
 
 code {

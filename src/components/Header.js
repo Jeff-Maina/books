@@ -7,8 +7,10 @@ function Header() {
   const [arrow, setArrow] = useState("arrow_drop_down");
   const [iconVisibility, setIconVisibility] = useState("hidden");
   const [menuActive, setMenuActive] = useState(false);
+  const [menuState, setMenuState] = useState(false);
 
   let categorymenu = categorymenustate ? "active" : "inactive";
+  let sitemenu = menuState ? "menuActive" : "menuInactive";
 
   //expand category menu
 
@@ -37,26 +39,35 @@ function Header() {
     let bar1 = document.getElementById("bar1");
     let bar2 = document.getElementById("bar2");
     let bar3 = document.getElementById("bar3");
-if (menuActive === false){
-bar1.style.opacity = 0;
-bar2.style.transform = "rotateZ(45deg)";
-bar3.style.width = "2em";
-bar3.style.transform = "rotateZ(-45deg)";
-bar3.style.left = "5px";
-bar3.style.top = "0px";
-setMenuActive(true)
-}
-else if(menuActive === true){
-  bar1.style.opacity = 1;
-bar2.style.transform = "rotateZ(0deg)";
-bar3.style.width = "1.5em";
-bar3.style.transform = "rotateZ(0deg)";
-bar3.style.left = "0px";
-bar3.style.top = "0px";
-setMenuActive(false)
-}
-}
-  
+    if (menuActive === false) {
+      bar1.style.opacity = 0;
+      bar2.style.transform = "rotateZ(45deg)";
+      bar3.style.width = "2em";
+      bar3.style.transform = "rotateZ(-45deg)";
+      bar3.style.left = "5px";
+      bar3.style.top = "0px";
+      setMenuActive(true);
+    } else if (menuActive === true) {
+      bar1.style.opacity = 1;
+      bar2.style.transform = "rotateZ(0deg)";
+      bar3.style.width = "1.5em";
+      bar3.style.transform = "rotateZ(0deg)";
+      bar3.style.left = "0px";
+      bar3.style.top = "0px";
+      setMenuActive(false);
+    }
+  }
+
+  // site menu toggle
+
+  function handleSiteMenu(){
+    if (menuActive === false) {
+      setMenuState(true);
+    }
+    if (menuActive === true) {
+      setMenuState(false);
+    }
+  }
 
   return (
     <header id="header">
@@ -132,6 +143,7 @@ setMenuActive(false)
       <div id="menu">
         <div
           onClick={() => {
+            handleSiteMenu()
             animateIcon();
           }}
           id="menuIcon"
@@ -139,6 +151,14 @@ setMenuActive(false)
           <div className="bar" id="bar1"></div>
           <div className="bar" id="bar2"></div>
           <div className="bar" id="bar3"></div>
+        </div>
+        <div className={sitemenu} id="menu-content">
+          <span><h3>Sign In</h3> <i className="material-icons">chevron_right </i></span>
+          <span><h3>Create Account</h3><i className="material-icons">chevron_right </i></span>
+          <span><h3>About</h3><i className="material-icons">chevron_right </i></span>
+          <span><h3>Bookmarks</h3><i className="material-icons">chevron_right </i></span>
+          <span><h3>Settings</h3><i className="material-icons">chevron_right </i></span>
+          <span id="logout"><h3>Log out</h3><i className="material-icons">chevron_right </i></span>
         </div>
       </div>
     </header>
