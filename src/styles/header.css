@@ -1,8 +1,91 @@
-#header{
-    position: fixed;
-    grid-area: header;
-    height: 4em;
-    width: 100%;
-    background-color: aquamarine;
-    width: 96em;
+#header {
+  position: fixed;
+  grid-area: header;
+  height: 4em;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+  width: 96em;
+  display: flex;
+  flex-direction: row;
+}
+
+/* category menu styling */
+
+#select {
+  position: relative;
+  color: rgb(69, 69, 69);
+  padding: 0.2em;
+  width: 11em;
+  margin-top: 1em;
+  margin-left: 1em;
+  padding-left: 0.5em;
+  border-radius: 10px;
+  font-family: comfortaa-bold;
+  border: none;
+  font-size: 1em;
+}
+
+#categories {
+  z-index: 12;
+  height: 3.7em;
+  width: 9.5em;
+  position: absolute;
+  top: -1em;
+  box-sizing: border-box;
+  padding-top: 1em;
+  display: flex;
+  background-color: hsl(0, 0%, 96%);
+}
+
+#categories h6 {
+  cursor: pointer;
+  margin: 0;
+  margin-top: 0.3em;
+  margin-right: 0.4em;
+  margin-left: 1em;
+  font-size: 1.1em;
+}
+
+#categories i {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  margin: 0;
+  margin-top: 0em;
+  font-size: 1.8em;
+  transition: 1s;
+}
+
+#categoryList {
+  background-color: hsl(0, 0%, 96%);
+  transition: 0.8s;
+  position: absolute;
+  width: 10em;
+}
+
+#categoryList span h6 {
+  cursor: pointer;
+  margin: 0;
+  font-size: 0.9em;
+  margin-bottom: 0.1em;
+  padding: 1em;
+}
+
+#categoryList span h6:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+#categoryList span h6:active {
+  background-color: rgb(212, 212, 212);
+}
+
+.inactive {
+  height: 8.7em;
+  top: -8em;
+}
+
+.active {
+  top: 1em;
+  padding-top: 2em;
+  height: 8.7em;
 }
