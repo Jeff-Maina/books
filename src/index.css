@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+
 @font-face {
   font-family: comfortaa-regular;
   src: url('./fonts/Comfortaa-Regular.ttf');
@@ -44,6 +47,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: overlay !important;
+  font-family: "Roboto", sans-serif;
 }
 
 body::-webkit-scrollbar{

@@ -2,7 +2,7 @@
 
 #randombooks {
   grid-area: randombooks;
-  background-color: azure;
+  background-color:var(--background-color);
   height: 27em;
   width: 96em;
   box-sizing: border-box;
@@ -124,7 +124,7 @@
 
 #check-btn {
   cursor: pointer;
-  color: rgb(237, 105, 127);
+  color: rgb(214, 110, 127);
   position: absolute;
   bottom: 0;
   border: none !important;
@@ -132,11 +132,15 @@
   font-weight: 800;
   padding: 0.4em 1.5em;
   border-radius: 10px;
-  opacity: .8;
 }
 
 #check-btn:hover{
-    opacity: 1;
+    color: rgb(215, 68, 92);
+}
+
+
+#check-btn:active{
+ scale: .98;
 }
 
 #previous {
