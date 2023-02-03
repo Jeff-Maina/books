@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/header.css";
+import settings from "../images/gear.png"
 
 function Header() {
   const [categorymenustate, setCategoryMenuState] = useState(false);
@@ -141,6 +142,8 @@ function Header() {
       </div>
 
       <div id="menu">
+      <i id="notifIcon" class="fa fa-bell-o"></i>
+      <div id="vertical-line"></div>
         <div
           onClick={() => {
             handleSiteMenu()
@@ -153,12 +156,14 @@ function Header() {
           <div className="bar" id="bar3"></div>
         </div>
         <div className={sitemenu} id="menu-content">
-          <span><h3>Sign In</h3> <i className="material-icons">chevron_right </i></span>
-          <span><h3>Create Account</h3><i className="material-icons">chevron_right </i></span>
-          <span><h3>About</h3><i className="material-icons">chevron_right </i></span>
-          <span><h3>Bookmarks</h3><i className="material-icons">chevron_right </i></span>
-          <span><h3>Settings</h3><i className="material-icons">chevron_right </i></span>
-          <span id="logout"><h3>Log out</h3><i className="material-icons">chevron_right </i></span>
+          <span><i id="menuIcons" className="material-symbols-outlined">login</i><h3>Sign In</h3> <i id="chevron" className="material-icons">chevron_right </i></span>
+          <span><i id="menuIcons" className="material-symbols-outlined">person</i><h3>Create Account</h3><i id="chevron" className="material-icons">chevron_right </i></span>
+          <span><i id="menuIcons" className="material-symbols-outlined">info</i><h3>About</h3><i id="chevron" className="material-icons">chevron_right </i></span>
+          <span><i id="menuIcons" className="material-symbols-outlined">bookmark</i><h3>Bookmarks</h3><i id="chevron" className="material-icons">chevron_right </i></span>
+          <span><i id="menuIcons" className="material-symbols-outlined">settings</i><h3>Settings</h3><i id="chevron" className="material-icons">chevron_right </i></span>
+          <span><i id="menuIcons" className="material-symbols-outlined">dark_mode</i><h3>Dark Mode</h3></span>
+          <hr/>
+          <span id="logout"><i id="menuIcons" className="material-symbols-outlined">person</i><h3>Log out</h3><i id="chevron" className="material-icons">chevron_right </i></span>
         </div>
       </div>
     </header>

@@ -3,4 +3,5 @@
     grid-area: main;
     width: 76em;
     height: 50em;
+    z-index: 20;
 }

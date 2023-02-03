@@ -1,12 +1,14 @@
 #header {
+  z-index: 9929;
   position: fixed;
   grid-area: header;
-  height: 4em;
+  height: 4.5em;
   width: 101%;
   background-color: var(--background-color);
   width: 96em;
   display: flex;
   flex-direction: row;
+  /* border-bottom: 0.7px solid rgb(208, 207, 207); */
 }
 
 /* category menu styling */
@@ -138,13 +140,13 @@
 /* logo */
 #logo-container {
   height: 100%;
-  width: 35em;
+  width: 40em;
   text-align: center;
 }
 
-#logo-container h3{
-position: relative;
-top: -15px;
+#logo-container h3 {
+  position: relative;
+  top: -15px;
 }
 
 #webname {
@@ -153,13 +155,7 @@ top: -15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 900;
-  background: linear-gradient(
-    to right,
-    #222831,
-    #393E46,
-    #00ADB5,
-    #222831
-  );
+  background: linear-gradient(to right, #222831, #393e46, #00adb5, #222831);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200%;
@@ -167,10 +163,10 @@ top: -15px;
 }
 
 @keyframes background-pan {
-  from{
+  from {
     background-position: 0% center;
   }
-  to{
+  to {
     background-position: -200% center;
   }
 }
@@ -180,95 +176,118 @@ top: -15px;
   color: rgb(52, 52, 52);
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 900;
   font-size: 2em;
 }
 
 /* menu */
-#menu{
+#menu {
   position: absolute;
-  right:4.8em;
-  height:100%;
+  right: 4.8em;
+  height: 100%;
   width: 5em;
 }
 
-#bar1{
+#bar1 {
   width: 1em;
   opacity: 1;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-#bar2{
+#bar2 {
   width: 2em;
   transform-origin: center center;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-#bar3{
-
+#bar3 {
   position: relative;
   width: 1.5em;
-  transform-origin:left center;
+  transform-origin: left center;
   left: 0;
   top: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.bar{
+.bar {
   border-radius: 10px;
   height: 5px;
   width: 2.5em;
   background-color: var(--main-color);
-  margin-bottom: .3em;
+  margin-bottom: 0.3em;
 }
 
+#vertical-line{
+  left: 3.5em;
+  top: 1em;
+  z-index: 20;
+  position: absolute;
+  height: 2em;
+  width: 2px;
+  background-color:rgb(195, 195, 195);
+}
 
-#menuIcon{
+#notifIcon {
+  position: absolute;
+  cursor: pointer;
+  z-index: 33;
+  top: 0.45em;
+  font-size: 2em;
+}
+
+#notifIcon::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: .6em;
+  top: 1px;
+  height: 11px;
+  width: 11px;
+  background-color: rgb(255, 145, 0)
+}
+
+#menuIcon {
   cursor: pointer;
   left: -10em;
   box-sizing: border-box;
   height: 100%;
   position: absolute;
-  padding-top: 1em;
+  padding-top: 1.3em;
   padding-left: 16em;
   background-color:var(--background-color);
-  width:19em ;
+  width: 19.3em;
   z-index: 11;
 }
 
-#menuIcon:hover div{
-  background: linear-gradient(
-    to right,
-    #222831,
-    #393E46,
-    #00ADB5,
-    #222831
-  );
+#menuIcon:hover div {
+  background: linear-gradient(to right, #222831, #393e46, #00adb5, #222831);
   background-size: 200%;
   animation: background-pan 2s linear infinite;
 }
 
-#menu-content{
+#menu-content {
+  border: 1px solid rgb(190, 190, 190);
   z-index: -1;
+  border-radius: 10px;
   position: absolute;
   left: -10em;
-  width: 19em;
-  height: 19em;
+  width: 17em;
+  height: 27em;
   background-color: hsl(0, 0%, 96%);
-  transition: .7s;
+  transition: 1s;
 }
 
-.menuActive{
-  top: 4em;
+.menuActive {
+  top: 5em;
   /* background-color: ; */
 }
 
-.menuInactive{
-  top: -15em;
+.menuInactive {
+  top: -22.8em;
 }
 
-#menu-content span{
+#menu-content span {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -276,45 +295,61 @@ top: -15px;
   flex-direction: row;
 }
 
-#menu-content i{
+#menuIcons{
+  position: relative;
+  top : 12px;
+  left : 10px;
+  font-size: 2em;
+  font-weight: 200 !important;
+}
+
+#chevron {
   position: absolute;
   right: 3em;
-  top: .5em;
+  top: 0.5em;
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-#menu-content h3{
+
+#menu-content h3 {
+  font-size: .9em;
   margin: 0;
-  padding: .7em;
-  padding-left: 1em;
+  padding: 1.5em;
+  padding-left: 1.5em;
   color: var(--text-color);
-  font-family: comfortaa-regular;
+  font-family: comfortaa-light;
 }
 
-#logout{
+#menu-content hr {
+  border: none;
+  height: .8px;
+  background-color: rgb(221, 221, 221);
+  margin: 0;
+  color: var(--text-color);
+
+}
+
+#logout {
   position: relative;
-  top: 1.4em;
+  top : .5em;
+  color: rgb(255, 89, 0) !important;
 }
 
-#menu-content span:hover i{
+
+#menu-content span:hover i {
   opacity: 1;
   right: 1em;
 }
 
-#menu-content span:hover{
-  background-color: rgb(201, 201, 201);
+#menu-content span:hover {
+  background-color: rgb(230, 230, 230);
 }
 
-#menu-content span:hover h3{
+#menu-content span:hover h3 {
   animation: background-pan 1s linear 1;
   margin: 0;
-  background: linear-gradient(
-    to right,
-    #222831,
-    #393E46,
-    #00ADB5,
-    #222831);
+  background: linear-gradient(to right, #222831, #393e46, #00adb5, #222831);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200%;

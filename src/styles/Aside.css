@@ -3,4 +3,5 @@
     background-color: bisque;
     height: 50em;
     width: 20em;
+    z-index: 20;
 }

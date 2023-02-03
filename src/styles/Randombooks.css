@@ -1,6 +1,188 @@
-#randombooks{
-    grid-area: randombooks;
-    background-color: brown;
-    height: 25em;
-    width:  96em;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+#randombooks {
+  grid-area: randombooks;
+  background-color: azure;
+  height: 27em;
+  width: 96em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  position: relative;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+#randombooks::-webkit-scrollbar {
+  appearance: none;
+}
+
+/* 0 */
+
+.randomBook {
+  position: relative;
+  top: 5.4em;
+  height: 64%;
+  left: -12.2em;
+  min-width: 40em;
+  background-color: rgb(218, 134, 148);
+  margin-right: 0.4em;
+  font-family: "Roboto", sans-serif;
+}
+
+#imagecard {
+  position: absolute;
+  top: 2em;
+  left: 1.5em;
+  height: 18em;
+  width: 13em;
+  background-color: aqua;
+  box-shadow: -2px 6px 19px 0px #7f818e;
+  transition: 0.5s;
+}
+
+#imagecard img {
+  height: 100%;
+  width: 100%;
+}
+
+#imagecard:hover {
+  scale: 1.05;
+}
+
+#book-details {
+  position: absolute;
+  left: 15.5em;
+  top: 3em;
+  height: 12.5em;
+}
+
+#randombook-name {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin: 0;
+  color: azure;
+}
+
+#authorname {
+  margin: 0;
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: azure;
+  margin-left: 2px;
+}
+
+#bookrating {
+  position: relative;
+  left: -4.6em;
+  top: 0.6em;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#bookrating > input {
+  display: none;
+  direction: ltr;
+}
+
+#bookrating > label {
+  position: relative;
+  width: 1.1em;
+  font-size: 1.3em;
+  color: azure;
+  cursor: pointer;
+}
+
+#bookrating > label::before {
+  content: "\2605";
+  position: absolute;
+  opacity: 1;
+}
+
+#bookrating > label:hover:before,
+#bookrating > label:hover ~ label:before {
+  opacity: 1 !important;
+  color: yellow !important;
+}
+
+#bookrating > input:checked ~ label:before {
+  opacity: 1;
+  color: yellow !important;
+}
+
+#bookrating:hover > input:checked ~ label:before {
+  opacity: 0.4;
+}
+
+#book-details p {
+  color: azure;
+  position: absolute;
+  width: 23em;
+  top: 4.6em;
+}
+
+#check-btn {
+  cursor: pointer;
+  color: rgb(237, 105, 127);
+  position: absolute;
+  bottom: 0;
+  border: none !important;
+  font-size: 1.1em;
+  font-weight: 800;
+  padding: 0.4em 1.5em;
+  border-radius: 10px;
+  opacity: .8;
+}
+
+#check-btn:hover{
+    opacity: 1;
+}
+
+#previous {
+  cursor: pointer;
+  z-index: 10;
+  position: fixed;
+  border-radius: 50%;
+  left: 1em;
+  opacity: 0.7;
+  top: 12.5em;
+  height: 3em;
+  width: 3em;
+  background-color: azure;
+}
+
+#previous i {
+  color: grey;
+  font-size: 3em;
+  position: relative;
+  left: -2px;
+}
+
+#previous:hover {
+  opacity: 0.9;
+}
+
+#next {
+  cursor: pointer;
+  z-index: 10;
+  position: fixed;
+  border-radius: 50%;
+  right: 1em;
+  opacity: 0.7;
+  top: 12.5em;
+  height: 3em;
+  width: 3em;
+  background-color: azure;
+}
+
+#next i {
+  font-size: 3em;
+  position: relative;
+  left: 2px;
+  color: grey;
+}
+
+#next:hover {
+  opacity: 0.9;
 }
