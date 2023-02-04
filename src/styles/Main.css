@@ -1,7 +1,203 @@
 #main{
-    background-color: blueviolet;
+    background-color: var(--background-color);
     grid-area: main;
     width: 76em;
     height: 43.7em;
     z-index: 20;
+    position: relative;
+}
+
+#genres-container{
+    position: absolute;
+    right: 2em;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: space-evenly;
+}
+
+#genres-container h4{
+    position: relative;
+    top: 0;
+    font-size: 1em;
+    padding: .2em .5em;
+    font-weight: 400;
+    /* background-color: aqua; */
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+#main hr{
+    position: relative;
+    top: 3.2em;
+    width: 95%;
+    border: none;
+    height: .2px;
+    background-color: rgb(214, 213, 213);
+}
+
+#genre-indicator{
+    position: absolute;
+    left: 33.9em;
+    top : 3em;
+    width: 3.3em;
+    border-radius: 5px;
+    transition: .5s;
+    height: 5px;
+    background-color: var(--secondary-color);
+}
+
+#main-books-container{
+    box-sizing: border-box;
+    padding-left: 2.5em;
+    /* padding-top: 2.5em; */
+    position: relative;
+    top: 3em;
+    height: 39.2em;
+    overflow-y: scroll ;
+    width: 100%;
+    /* background-color: bisque; */
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#main-books-container::-webkit-scrollbar{
+    appearance: none;
+}
+
+.main-book{
+    position: relative;
+    margin-top: 7.5em;
+    height: 17em;
+    width: 35em;
+    background-color:#f4fcfe;
+}
+
+.main-book-image{
+    position: absolute;
+    height: 105%;
+    background-color: aqua;
+    width: 13em;
+    top: -4em;
+    transition: .5s;
+    left: 1.1em;
+    box-shadow: -2px 6px 19px 0px #7f818e;
+}
+
+.book-cover{
+    height: 100%;
+    width: 100%;
+}
+
+.main-book-image:hover{
+    scale: 1.05;
+}
+
+.main-book-details{
+    position: absolute;
+    right: 0;
+    height: 96%;
+    width: 59%;
+    box-sizing: border-box;
+    padding: 0em 2em;
+    /* background-color: aqua; */
+}
+
+#moreIcon{
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.7em;
+    right: 0.1em;
+    top: 0.3em;
+}
+
+#moreIcon:hover{
+    color: grey;
+}
+
+#main-book-name{
+    color: var(--text-color);
+}
+
+#main-book-author{
+    margin: 0;
+    color: grey;
+}
+
+#main-book-description{
+    color: rgb(92, 91, 91);
+}
+
+#bookmarkSpan{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+#bookmarkSpan i{
+    font-size: 1em;
+    position: relative;
+    top: .85em;
+    left: 0.3em;
+    color: rgb(192, 192, 192);
+}
+
+#bookmarkSpan:hover{
+    background-color: #52565c;
+}
+
+#bookmarkSpan:active{
+    background-color: #585858;
+}
+
+#bookmarkSpan:hover i, #bookmarkSpan:hover h3{
+    color: #f4fcfe;
+}
+
+#bookmark{
+    position: absolute;
+    height: 2.6em;
+    width: 7em;
+    background-color: var(--text-color);
+    right: 0.2em;
+    visibility: hidden;
+    top: .8em;
+    border-radius: 5px;
+    text-align: start;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+#bookmark h3{
+  font-weight: 400;
+  cursor: pointer;
+  margin: 0;
+  padding: .3em 0.6em;
+  margin-top: .37em;
+  color: rgb(192, 192, 192);
+  font-size: 1em;
+  /* background-color: grey; */
+}
+
+#main-book-button{
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    box-shadow: -2px 3px 19px 0px #afafaf;
+    font-size: 1em;
+    height: 3em;
+    font-weight: 800;
+    background-color: var(--secondary-color);
+    width: 3em;
+    bottom: 0em;
+    color: azure;
+    right: 1em;
+    border-radius: 50%;
+}
+
+#main-book-button:active{
+    box-shadow: -2px 3px 10px 0px #afafaf;
 }
